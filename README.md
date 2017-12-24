@@ -42,14 +42,6 @@ Just search Pyqt4 (python3-pyqt4) on the package manager, and install the versio
 Then download the program.
 Make pixeditor.py executable and run it.
 
-Eg, in Ubuntu: 
-
-    sudo apt-get install python3-pyqt4
-    wget [](./archive/master.zip)
-    unzip master.zip
-    cd pixeditor-master/
-    python3 pixeditor.py
-
 
 MacOS
 ----
