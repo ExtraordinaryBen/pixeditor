@@ -598,7 +598,7 @@ class MainWindow(QtGui.QMainWindow):
     def closeEvent(self, event):
         ret = True
         if not self.project.saved:
-            message = QtGui.QMessageBox()
+            message = QtGui.QMessageBox(self)
             message.setWindowTitle("Quit?")
             message.setText("Are you sure you want to quit?");
             message.setIcon(QtGui.QMessageBox.Warning)
