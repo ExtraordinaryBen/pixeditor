@@ -195,12 +195,6 @@ def export_png(project, fullUrl=""):
             p.end()
         canvas.save(fn)
         
-    # convert all png to a gif with imagemagick   
-    convertCommand = 'convert'
-    import platform
-    if platform.system() == 'Windows':
-        convertCommand = "\"" + os.path.join(os.path.dirname(os.path.realpath(__file__)), "imagemagick\\convert.exe\"")
-    os.system("%s -delay 1/%s -dispose Background -loop 0 %s*.png %s.gif" %(convertCommand, project.fps, url, url))
     return fullUrl
     
 def import_palette(url, nColor=0):
