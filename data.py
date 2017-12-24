@@ -8,6 +8,8 @@ from PyQt4 import QtGui
 
 import xml.etree.ElementTree as ET
 
+DEFAULT_BGP_SIZE = 8
+
 class Project(QtCore.QObject):
     """ store all data that need to be saved"""
     updateViewSign = QtCore.pyqtSignal()
@@ -57,7 +59,7 @@ class Project(QtCore.QObject):
         else:
             self.timeline = Timeline(self, [Layer(self, [self.makeCanvas()], 'layer 1')])
         self.bgColor = QtGui.QColor(150, 150, 150)
-        self.bgPattern = 16
+        self.bgPattern = DEFAULT_BGP_SIZE
         self.url = None
         self.dirUrl = None
         self.fps = 12
